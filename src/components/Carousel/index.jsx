@@ -6,7 +6,7 @@ import Breakfast from "../Breakfast";
 import Dinner from "../Dinner";
 import Supper from "../Supper";
 
-export default function Carousel() {
+export default function Carousel(props) {
     let settings = {
         dots: false,
         arrows: false,
@@ -18,9 +18,10 @@ export default function Carousel() {
         pauseOnHover: false,
         pauseOnFocus: false
     };
+
     return (
         <Slider {...settings}>
-            <Breakfast />
+            <Breakfast data={props}/>
             <Dinner />
             <Supper />
         </Slider>
