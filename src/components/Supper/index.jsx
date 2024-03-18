@@ -4,7 +4,7 @@ import leftImg from '../../img/left-side-img/1-left-min.jpg';
 const Supper = () => {
     return (
         <div className="menu__slide" data-meal="supper" data-side="left">
-            <img src={leftImg} alt="1-left-min" />
+            <img className="menu__img" src={leftImg} alt="1-left-min" />
             <div className="menu__description">
                 <div className="menu__header-block">
                     <div className="menu__diet">Дієта №15</div>
