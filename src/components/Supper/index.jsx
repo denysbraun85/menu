@@ -1,37 +1,33 @@
 import React from "react";
 import leftImg from '../../img/left-side-img/1-left-min.jpg';
 
-const Supper = () => {
+const Supper = (props) => {
     return (
-        <div className="menu__slide" data-meal="supper" data-side="left">
+        <div className="menu__slide" data-meal="supper" data-side="right">
             <img className="menu__img" src={leftImg} alt="1-left-min" />
             <div className="menu__description">
                 <div className="menu__header-block">
-                    <div className="menu__diet">Дієта №15</div>
+                    <div className="menu__diet">{props.dataWeekMenu[props.dataKey].diet}</div>
                     <div className="menu__date">
-                        <span className="menu__date-day">Понеділок</span>
-                        <span className="menu__date-data">04.03.2024</span>
+                        <span className="menu__date-day">{props.dataWeekMenu[props.dataKey].day}</span>
+                        <span className="menu__date-data">{props.dataKey}</span>
                     </div>
                 </div>
-                <div className="menu__title">Вечеря</div>
+                <div className="menu__title">{props.dataWeekMenu[props.dataKey].supper.name}</div>
                 <ul className="menu__meals-block">
                     <li className="menu__meals-item">
-                        <p className="menu__meals-name">М’ясо тушковане з макаронами з маслом вершковим</p>
-                        <span className="menu__meals-output">267</span>
+                        <p className="menu__meals-name" dangerouslySetInnerHTML={{ __html: props.dataWeekMenu[props.dataKey].supper.dish_1.name }}/>
+                        <span className="menu__meals-output">{props.dataWeekMenu[props.dataKey].supper.dish_1.output}</span>
                     </li>
                     <li className="menu__meals-item">
-                        <p className="menu__meals-name">Хліб, масло, яйце, цукор, чай з лимоном</p>
-                        <span className="menu__meals-output">250</span>
+                        <p className="menu__meals-name" dangerouslySetInnerHTML={{ __html: props.dataWeekMenu[props.dataKey].supper.dish_2.name }}/>
+                        <span className="menu__meals-output">{props.dataWeekMenu[props.dataKey].supper.dish_2.output}</span>
                     </li>
                 </ul>
                 <ul className="menu__footer-block">
                     <li className="menu__responsible-item">
-                        <p className="menu__meals-name">Начальник їдальні:</p>
-                        <span className="menu__meals-output">сержант Марія САХНЮК</span>
-                    </li>
-                    <li className="menu__responsible-item">
-                        <p className="menu__responsible-chief">Кухар</p>
-                        <span className="menu__responsible-cook">солдат Олена ДРАГАН</span>
+                        <p className="menu__meals-name">{props.dataWeekMenu[props.dataKey].responsive.chief_position}</p>
+                        <span className="menu__meals-output">{props.dataWeekMenu[props.dataKey].responsive.chief_name}</span>
                     </li>
                 </ul>
             </div>

@@ -21,7 +21,7 @@ body {
 
 .menu__slide[data-side="right"] .menu__description {
     margin-left: auto;
-    padding: 2vw 0 2vw 2vw;
+    padding: 2vw 2vw 2vw 0;
 }
 
 .menu__slide[data-side="right"] .menu__description .menu__header-block {
