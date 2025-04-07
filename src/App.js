@@ -1,5 +1,5 @@
 import './App.css';
-import Carousel from "./components/Carousel";
+import Breakfast from "./components/Breakfast";
 import React from "react";
 import WeekMenu from "./week_menu";
 
@@ -10,7 +10,8 @@ function App() {
   for (const key in WeekMenu) {
     if (formattedDate === key) {
       return (
-          <Carousel dataKey={key} dataWeekMenu={WeekMenu}/>
+          <Breakfast dataWeekMenu={WeekMenu} dataKey={key}/>
+          // <Carousel dataKey={key} dataWeekMenu={WeekMenu}/>
       );
     }
   }
