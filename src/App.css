@@ -15,12 +15,12 @@ body {
 }
 
 .menu__slide[data-side="left"] .menu__description {
-    right: 0;
-    padding: 2vw 2vw 2vw 0;
+    margin-right: auto;
+    padding: 2vw 0 2vw 2vw;
 }
 
 .menu__slide[data-side="right"] .menu__description {
-    left: 0;
+    margin-left: auto;
     padding: 2vw 0 2vw 2vw;
 }
 
@@ -53,7 +53,6 @@ body {
     font-size: 55px;
     width: 80%;
     height: 100%;
-    margin-left: auto;
     box-sizing: border-box;
 }
 
