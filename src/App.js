@@ -12,9 +12,11 @@ function App() {
   for (const key in WeekMenu) {
     if (formattedDate === key) {
       return (
-          // <Breakfast dataWeekMenu={WeekMenu} dataKey={key}/>
-          // <Dinner dataWeekMenu={WeekMenu} dataKey={key}/>
-          <Supper dataWeekMenu={WeekMenu} dataKey={key}/>
+          <div>
+            <Breakfast dataWeekMenu={WeekMenu} dataKey={key}/>
+            <Dinner dataWeekMenu={WeekMenu} dataKey={key}/>
+            <Supper dataWeekMenu={WeekMenu} dataKey={key}/>
+          </div>
       );
     }
   }

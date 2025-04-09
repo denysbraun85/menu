@@ -16,15 +16,15 @@ const Breakfast = (props) => {
                 <div className="menu__title">{props.dataWeekMenu[props.dataKey].breakfast.name}</div>
                 <ul className="menu__meals-block">
                     <li className="menu__meals-item">
-                        <p className="menu__meals-name">{props.dataWeekMenu[props.dataKey].breakfast.dish_1.name}</p>
+                        <p className="menu__meals-name" dangerouslySetInnerHTML={{ __html: props.dataWeekMenu[props.dataKey].breakfast.dish_1.name }}/>
                         <span className="menu__meals-output">{props.dataWeekMenu[props.dataKey].breakfast.dish_1.output}</span>
                     </li>
                     <li className="menu__meals-item">
-                        <p className="menu__meals-name">{props.dataWeekMenu[props.dataKey].breakfast.dish_2.name}</p>
+                        <p className="menu__meals-name" dangerouslySetInnerHTML={{ __html: props.dataWeekMenu[props.dataKey].breakfast.dish_2.name }}/>
                         <span className="menu__meals-output">{props.dataWeekMenu[props.dataKey].breakfast.dish_2.output}</span>
                     </li>
                     <li className="menu__meals-item">
-                        <p className="menu__meals-name">{props.dataWeekMenu[props.dataKey].breakfast.dish_3.name}</p>
+                        <p className="menu__meals-name" dangerouslySetInnerHTML={{ __html: props.dataWeekMenu[props.dataKey].breakfast.dish_3.name }}/>
                         <span className="menu__meals-output">{props.dataWeekMenu[props.dataKey].breakfast.dish_3.output}</span>
                     </li>
                 </ul>
