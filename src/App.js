@@ -9,6 +9,7 @@ const date = new Date();
 const formattedDate = date.toLocaleDateString();
 
 function App() {
+    console.log('test 1111');
   for (const key in WeekMenu) {
     if (formattedDate === key) {
       return (
